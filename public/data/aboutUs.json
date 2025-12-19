@@ -1,14 +1,14 @@
 [
   {
-    "image": "/assets/textPurple.png",
-    "text": "Non ex magna qui magna aliquip sunt eu reprehenderit. Mollit commodo amet quis exercitation non amet anim laboris. Veniam culpa excepteur ipsum id sint voluptate dolore eu ex laborum esse officia laboris ad."
+    "image": "/assets/c2.png",
+    "text": "I build scalable and responsive web applications using React.js, Vue.js, and modern backend technologies. My focus is on clean UI, secure APIs, and high-performance systems tailored for real business workflows."
   },
   {
-    "image": "/assets/textPurple1.png",
-    "text": "Magna nulla irure veniam tempor pariatur excepteur consectetur tempor esse.Sit occaecat culpa mollit Lorem consequat pariatur qui sunt nostrud nisi."
+    "image": "/assets/mobileeco.png",
+    "text": "I develop Progressive Web Applications (PWA) and mobile-friendly platforms that deliver seamless user experiences, offline capabilities, and optimized performance across devices."
   },
   {
-    "image": "/assets/textCat.png",
-    "text": "Anim consectetur aute laborum commodo ullamco eiusmod ea id veniam fugiat nulla nostrud tempor."
+    "image": "/assets/ioteco.png",
+    "text": "I design and implement IoT-enabled automation solutions using MQTT, Node-RED, and Node.js, enabling real-time device communication, monitoring dashboards, and automated control systems for industrial and enterprise use cases."
   }
 ]

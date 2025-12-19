@@ -112,7 +112,7 @@ export default function HomepageExamples(props: ExamplesProps) {
       className={`${className} relative flex h-full w-full flex-col items-center justify-center gap-10 p-5 md:p-10`}
     >
       <div className='spotlight spotlight-left'></div>
-      <div className='font-dongle text-5xl  uppercase text-secondary'>Examples</div>
+      <div className='font-dongle text-5xl  uppercase text-secondary'>Projects we handle</div>
       <div
         ref={bgTextRef}
         className='text-shadow absolute z-0 hidden -rotate-90 transform text-start text-[80px] uppercase tracking-wider  text-background brightness-50  lg:block lg:text-[80px] '

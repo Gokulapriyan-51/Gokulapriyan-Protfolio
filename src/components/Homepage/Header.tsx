@@ -58,16 +58,16 @@ export default function HomepageHeader() {
             setSectionId('#banner');
           }}
         >
-          <Image
+          {/* <Image
             width={50}
             height={50}
             alt='logo'
-            className='h-11 w-auto md:h-14 md:w-auto'
-            src='/assets/logo.png'
-          />
+            className='h-16 w-auto md:h-18 md:w-auto'
+            src='/assets/Karmen pnf.jpg'
+          /> */}
           <div className='font-coiny text-lg leading-5 tracking-wider text-secondary md:text-xl md:leading-6'>
-            <div className='whitespace-nowrap text-primary'>{"Kus'"}</div>
-            <div className='whitespace-nowrap'>Solutions</div>
+            <div className='whitespace-nowrap text-primary'>{"Gokulapriyan"}</div>
+            <div className='whitespace-nowrap'>Protfolio</div>
           </div>
         </Navbar.Brand>
         <div className='flex h-full cursor-pointer items-center gap-2 text-xs text-secondary hover:text-primary md:order-2 md:text-base  lg:gap-6 lg:pr-5'>
@@ -85,7 +85,7 @@ export default function HomepageHeader() {
             }}
             className={`cursor-pointer p-2 text-xl text-secondary hover:text-primary md:p-0 md:text-base `}
           >
-            Examples
+            Projects
           </div>
           <div
             onClick={() => {
@@ -95,21 +95,21 @@ export default function HomepageHeader() {
           >
             Technologies
           </div>
-          <div
+          {/* <div
             onClick={() => {
               setSectionId('#reviews');
             }}
             className={`cursor-pointer p-2 text-xl text-secondary hover:text-primary md:p-0 md:text-base `}
           >
             Reviews
-          </div>
+          </div> */}
           <div
             onClick={() => {
               setSectionId('#aboutUs');
             }}
             className={`cursor-pointer p-2 text-xl text-secondary hover:text-primary md:p-0 md:text-base `}
           >
-            About Us
+            About 
           </div>
         </Navbar.Collapse>
       </Navbar>

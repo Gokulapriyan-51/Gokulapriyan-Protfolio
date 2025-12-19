@@ -16,23 +16,23 @@
   transform: translate3d(10px, 10px, -1px);
   background: conic-gradient(
     from 90deg at 40% -25%,
-    #6a0dad,
-    #7a1dc6,
-    #8b2ddf,
-    #9c3df8,
-    #ae4eff,
-    #c15fff,
-    #d371ff,
-    #e483ff,
-    #d371ff,
-    #c15fff,
-    #ae4eff,
-    #9c3df8,
-    #8b2ddf,
-    #7a1dc6,
-    #6a0dad,
-    #6a0dad,
-    #6a0dad
+    #0d72ad,
+    #1d74c6,
+    #2d7ddf,
+    #3d94f8,
+    #4e66ff,
+    #5facff,
+    #71a3ff,
+    #83c9ff,
+    #71aaff,
+    #5fa2ff,
+    #4e9bff,
+    #3d8ef8,
+    #2d83df,
+    #1d55c6,
+    #0d48ad,
+    #0d45ad,
+    #0d35ad
   );
   border-radius: 15px;
   filter: blur(1px);

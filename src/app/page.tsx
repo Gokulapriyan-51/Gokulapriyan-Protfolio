@@ -5,7 +5,7 @@ import ContactUsForm from '@/components/Homepage/ContactUs/ContactUsForm';
 import HomepageExamples from '@/components/Homepage/Examples';
 import HomepageFooter from '@/components/Homepage/Footer';
 import HomepageHeader from '@/components/Homepage/Header';
-import HomepageReviews from '@/components/Homepage/Reviews';
+// import HomepageReviews from '@/components/Homepage/Reviews';
 import HomepageTechnologies from '@/components/Homepage/Technologies';
 import '@/components/Homepage/styles/spotlights.css';
 import { useEffect, useState } from 'react';
@@ -23,7 +23,7 @@ export default function Home() {
           <HomepageBanner className='mt-52' />
           <HomepageExamples />
           <HomepageTechnologies />
-          <HomepageReviews />
+          {/* <HomepageReviews /> */}
           <HomepageAboutUs />
           <ContactUsForm />
           <HomepageFooter />

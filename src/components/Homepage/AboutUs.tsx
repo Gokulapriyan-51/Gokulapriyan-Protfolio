@@ -8,34 +8,25 @@ interface AboutUsProps {
   className?: string;
 }
 
-interface CardProps {
-  imageOnLeft?: boolean;
-  image: string;
-  text: string;
-}
-
-const Card = (props: CardProps) => {
-  const { image, imageOnLeft = true, text } = props;
+const Card = ({ image, text, imageOnLeft }: { image: string; text: string; imageOnLeft?: boolean }) => {
   return (
-    <div className='relative flex min-h-full min-w-full flex-row items-center justify-between py-5 md:mx-10'>
-      <Image
-        alt='aboutus-image'
-        className={`absolute bottom-0 hidden h-[200px] w-auto md:block ${
-          imageOnLeft ? '-translate-x-52' : 'right-0 translate-x-52'
-        }  translate-y-12`}
-        src={image}
-        width={500}
-        height={500}
-        draggable={false}
-      />
-      <div className='text-justify text-gray-300'>{text}</div>
+    <div className={`relative flex flex-col md:flex-row items-center gap-10 p-8 bg-white/10 backdrop-blur-lg rounded-2xl shadow-lg`}>
+      {/* IMAGE SECTION */}
+      <div className={`md:w-1/3 ${imageOnLeft ? 'order-1' : 'order-2'}`}>
+        <Image src={image} alt="aboutus-image" width={300} height={300} className="rounded-xl shadow-lg" />
+      </div>
+
+      {/* TEXT SECTION */}
+      <div className="md:w-2/3 text-center md:text-left text-gray-300 text-lg">
+        {text}
+      </div>
     </div>
   );
 };
 
-export default function HomepageAboutUs(props: AboutUsProps) {
-  const { className } = props;
+export default function HomepageAboutUs({ className }: AboutUsProps) {
   const bgTextRef = useRef(null);
+
   useEffect(() => {
     gsap.to(bgTextRef.current, {
       xPercent: 28,
@@ -49,32 +40,19 @@ export default function HomepageAboutUs(props: AboutUsProps) {
       }
     });
   }, []);
+
   return (
-    <div
-      id='aboutUs'
-      className={`${className} relative flex w-full flex-col border-b-4 border-primary p-2 py-16 md:p-5 md:px-0`}
-    >
-      <div className='spotlight spotlight-right'></div>
-      <div className='relative hidden w-full items-center justify-center px-10 py-16 font-dongle text-5xl text-secondary md:flex'>
-        <div
-          ref={bgTextRef}
-          className='text-shadow absolute left-0 z-0 text-start text-[150px] uppercase  tracking-wider text-background  brightness-50 lg:left-[15%] lg:text-[200px] '
-        >
-          {`"About Us"`}
-        </div>
-        <div className='z-10 text-6xl uppercase'>What we do</div>
-      </div>
-      <div className='w-full pb-5 text-center font-dongle text-5xl text-secondary md:hidden'>
-        About Us
-      </div>
-      <div className='flex h-full w-full flex-col items-center justify-center gap-5 self-center rounded-3xl bg-primary/20 p-5 md:w-1/2 md:gap-10 md:p-10'>
+    <div id="aboutUs" className={`relative flex flex-col items-center px-6 md:px-16 py-20 ${className}`}>
+      
+      {/* Section Heading */}
+      <h2 className="text-4xl md:text-6xl font-bold text-white text-center mb-10">
+        About 
+      </h2>
+
+      {/* About Us Content */}
+      <div className="flex flex-col gap-10 w-full max-w-5xl">
         {aboutUs.map((card, index) => (
-          <React.Fragment key={index}>
-            <Card text={card.text} image={card.image} imageOnLeft={index % 2 === 0} />
-            {index + 1 < aboutUs.length && (
-              <div className='w-full border-b-4 border-primary md:w-3/4'></div>
-            )}
-          </React.Fragment>
+          <Card key={index} text={card.text} image={card.image} imageOnLeft={index % 2 === 0} />
         ))}
       </div>
     </div>

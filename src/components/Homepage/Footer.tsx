@@ -7,6 +7,7 @@ import { useEffect, useState } from 'react';
 import {
   PiCheckCircleBold,
   PiEnvelopeSimpleBold,
+  PiGithubLogo,
   PiInstagramLogo,
   PiLinkedinLogo,
   PiPhoneBold,
@@ -39,38 +40,45 @@ export default function HomepageFooter(props: HomepageFooterProps) {
       className={`${className} flex h-full w-full flex-col items-center justify-center gap-10 p-10`}
     >
       <div className='flex flex-row gap-5 font-coiny text-4xl uppercase text-secondary'>
-        <div className='text-primary'>our</div>
+        <div className='text-primary'>My</div>
         contacts
       </div>
       <div className='flex flex-row gap-10 text-5xl text-secondary md:text-6xl'>
         <Link
-          href='https://www.instagram.com/'
+          href='https://www.instagram.com/gokulapriyan__.gp/'
           className='cursor-pointer text-secondary hover:text-primary'
           target='_blank'
         >
           <PiInstagramLogo />
         </Link>
         <Link
-          href='https://linkedin.com/'
+          href='https://www.linkedin.com/in/gokulapriyan-v-1968ab248/'
           className='cursor-pointer text-secondary hover:text-primary'
           target='_blank'
         >
           <PiLinkedinLogo />
         </Link>
-        <Link
+        {/* <Link
           href='https://telegram.com/'
           className='cursor-pointer text-secondary hover:text-primary'
           target='_blank'
         >
           <PiTelegramLogo />
-        </Link>
+        </Link> */}
         <Link
+          href='https://github.com/Gokulapriyan-51' // Replace with your actual GitHub URL
+          className='cursor-pointer text-secondary hover:text-primary'
+          target='_blank'
+        >
+          <PiGithubLogo />
+        </Link>
+        {/* <Link
           href='https://tiktok.com/'
           className='cursor-pointer text-secondary hover:text-primary'
           target='_blank'
         >
           <PiTiktokLogo />
-        </Link>
+        </Link> */}
       </div>
       <span className='cursor-default self-center font-dongle text-5xl text-primary md:self-start md:px-20'>
         Service
@@ -91,23 +99,23 @@ export default function HomepageFooter(props: HomepageFooterProps) {
             }}
             className={`cursor-pointer  text-secondary hover:text-primary`}
           >
-            Examples
+            Projects
           </div>
-          <div
+          {/* <div
             onClick={() => {
               setSectionId('#reviews');
             }}
             className={`cursor-pointer  text-secondary hover:text-primary`}
           >
             Reviews
-          </div>
+          </div> */}
           <div
             onClick={() => {
               setSectionId('#aboutUs');
             }}
             className={`cursor-pointer  text-secondary hover:text-primary`}
           >
-            About Us
+            About 
           </div>
         </div>
         <div className='flex w-full flex-col items-center justify-center md:items-end'>
@@ -151,6 +159,26 @@ export default function HomepageFooter(props: HomepageFooterProps) {
               <PiPhoneBold /> {contacts.number}
             </div>
           </Tooltip>
+          <Tooltip
+            placement={window.innerWidth >= 500 ? 'left' : 'top'}
+            trigger='click'
+            className='bg-gradient-to-br from-primary px-2 py-0'
+            content={
+              <div className='flex items-center justify-center gap-1 font-dongle text-xl'>
+                <PiCheckCircleBold />
+                <span className=' text-2xl'>Copied!</span>
+              </div>
+            }
+          >
+            {/* <div
+              className='flex cursor-pointer flex-row items-center gap-2 decoration-primary hover:underline  md:flex-row-reverse'
+              onClick={() => {
+                navigator.clipboard.writeText(contacts.number2);
+              }}
+            >
+              <PiPhoneBold /> {contacts.number2}
+            </div> */}
+          </Tooltip>
           <div className='cursor-default opacity-0'>placeholder</div>
           <div
             className='flex cursor-pointer flex-row-reverse items-center self-end text-end'
@@ -162,12 +190,12 @@ export default function HomepageFooter(props: HomepageFooterProps) {
               width={50}
               height={50}
               alt='logo'
-              className='h-11 w-auto md:h-14 md:w-auto'
-              src='/assets/logo.png'
+              className='h-16 w-auto md:h-18 md:w-auto'
+              src='/assets/Karmen pnf.jpg'
             />
             <div className='font-coiny text-lg leading-5 tracking-wider text-secondary md:text-xl md:leading-6'>
-              <div className='whitespace-nowrap text-primary'>{"Kus'"}</div>
-              <div className='whitespace-nowrap'>Solutions</div>
+              <div className='whitespace-nowrap text-primary'>{"Gokulapriyan"}</div>
+              <div className='whitespace-nowrap'>Protfolio</div>
             </div>
           </div>
         </div>

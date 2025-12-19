@@ -7,8 +7,8 @@ import OrderNowButton from '../buttons/OrderNowButton';
 const { logos, technologiesText } = technologies;
 
 const config = {
-  circlesNum: 21, // The total amount of circles for technologies
-  parallaxIntensity: 70 // Adjust the factor to change the intensity of circles movement
+  circlesNum: 21, 
+  parallaxIntensity: 70
 };
 
 interface HomepageTechnologies {

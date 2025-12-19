@@ -1,14 +1,22 @@
 [
   {
-    "label": "☄️ Quick",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labores fsafas fsa fsaf saf safasfsa fsa fa"
+    "label": "🚀 What I Build",
+    "text": "I design and develop scalable full-stack and backend systems for real-world business use cases, including enterprise web applications, automation platforms, and IoT-enabled solutions."
   },
   {
-    "label": "☄️ Quick",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labores fsafas fsa fsaf saf safasfsa fsa fa"
+    "label": "🌐 Full Stack Web Applications",
+    "text": "Experienced in building responsive and high-performance web applications using React.js, Vue.js, Node.js, and TypeScript, with a strong focus on clean UI and reliable backend services."
   },
   {
-    "label": "☄️ Quick",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labores fsafas fsa fsaf saf safasfsa fsa fa"
+    "label": "🔗 Backend & API Engineering",
+    "text": "I specialize in developing secure, optimized RESTful APIs using Node.js, Express.js, and NestJS, handling authentication, authorization, and high-volume data transactions."
+  },
+  {
+    "label": "📡 IoT & Real-Time Communication",
+    "text": "Hands-on experience integrating IoT systems using MQTT and Node-RED, enabling real-time device communication, automation workflows, and monitoring dashboards."
+  },
+  {
+    "label": "🧠 Scalable Data & System Architecture",
+    "text": "I design efficient database architectures using PostgreSQL, MongoDB, and Prisma ORM, and build containerized, production-ready systems with Docker and cloud-ready deployment practices."
   }
 ]

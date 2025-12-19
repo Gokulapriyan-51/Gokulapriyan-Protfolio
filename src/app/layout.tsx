@@ -7,8 +7,8 @@ const coiny = Coiny({ variable: '--font-coiny', weight: '400', subsets: ['latin'
 const dongle = Dongle({ variable: '--font-dongle', weight: '400', subsets: ['latin'] });
 
 export const metadata: Metadata = {
-  title: "Kus' Solutions",
-  description: "Websites with a Kus'tom touch",
+  title: "Gokulapriyan",
+  description: "Protfolio of Gokulapriyan",
   viewport: 'width=device-width, initial-scale=1, minimum-scale=1, user-scalable=0'
 };
 

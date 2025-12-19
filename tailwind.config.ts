@@ -19,7 +19,7 @@ const config: Config = {
       },
       colors: {
         background: '#000000',
-        primary: '#8063A6', // #7032c2
+        primary: '#4e7db7', //rgb(64, 73, 201)
         secondary: '#ffffff'
       },
       boxShadow: {

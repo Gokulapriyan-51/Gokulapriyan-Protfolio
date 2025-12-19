@@ -28,7 +28,7 @@ export default function OrderNowButton(props: OrderNowButtonProps) {
         setSectionId('#contactUs');
       }}
     >
-      Order now!
+      Contact 
     </div>
   );
 }

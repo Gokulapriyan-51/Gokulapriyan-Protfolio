@@ -3,18 +3,28 @@ import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function ImageBanner({ className }: { className?: string }) {
-  const image1Ref = useRef(null);
-  const image2Ref = useRef(null);
+  const image1Ref = useRef<HTMLImageElement | null>(null);
+  const image2Ref = useRef<HTMLImageElement | null>(null);
 
   useEffect(() => {
-    const tl = gsap.timeline({ repeat: -1, yoyo: true, repeatDelay: 10 });
-    tl.to(image1Ref.current, { x: '100%', opacity: 0, duration: 2 }, '+=1').fromTo(
+    const tl = gsap.timeline({
+      repeat: -1,
+      yoyo: true,
+      repeatDelay: 8
+    });
+
+    tl.to(image1Ref.current, {
+      x: '100%',
+      opacity: 0,
+      duration: 2
+    }).fromTo(
       image2Ref.current,
-      { x: '-100%', opacity: 0, duration: 2 },
-      { x: 0, opacity: 1, duration: 2 },
+      { x: '-100%', opacity: 0 },
+      { x: '0%', opacity: 1, duration: 2 },
       '-=1'
     );
 
+    // ✅ Type-safe cleanup
     return () => {
       tl.kill();
     };
@@ -22,31 +32,28 @@ export default function ImageBanner({ className }: { className?: string }) {
 
   return (
     <>
-      <div
-        className={`top-0 w-full ${className} absolute inset-1 flex items-center justify-center`}
-      >
+      <div className={`absolute inset-0 flex items-center justify-center ${className}`}>
         <Image
           ref={image2Ref}
-          className={`z-0 h-full w-full object-contain opacity-0 md:w-auto`}
-          alt='banner-image'
-          src='/assets/textPurple.png'
-          priority
+          src="/assets/pngwing.png"
+          alt="banner"
           width={1000}
           height={1000}
+          priority
+          className="h-full w-full object-contain opacity-0"
         />
       </div>
-      <div
-        className={`top-0 w-full ${className} absolute inset-1 flex items-center justify-center`}
-      >
+
+      <div className={`absolute inset-0 flex items-center justify-center ${className}`}>
         <Image
           ref={image1Ref}
-          className={`z-0 h-full w-full object-contain md:w-auto`}
-          alt='banner-image'
-          src='/assets/catPurple.png'
-          priority
+          src="/assets/img3.png"
+          alt="banner"
           width={1000}
           height={1000}
-        />
+          priority
+          className="h-full w-full object-contain"
+        />  
       </div>
     </>
   );

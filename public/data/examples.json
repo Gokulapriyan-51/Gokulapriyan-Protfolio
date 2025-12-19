@@ -1,31 +1,42 @@
 [
   {
-    "preview": "/assets/examples/example.png",
-    "text": "Sit ex aliquip consequat labore qui aute anim sit. Aliquip fugiat elit ad officia id ad exercitation sit excepteur duis. Nostrud qui ullamco labore nostrud ullamco commodo aute ut proident elit occaecat magna. Veniam quis proident eiusmod laborum laboris veniam. Sunt dolor Lorem sunt aliqua ipsum fugiat aliquip do officia sint minim tempor. Consequat in adipisicing consectetur cillum amet do nulla amet minim sint.",
-    "title": "Website Name",
-    "tags": ["smth", "another tag", "something else"],
-    "images": ["/assets/examples/example.png", "/assets/examples/example1.png"]
+    "preview": "/assets/projects/d365-invoicing.png",
+    "title": "End-to-End Business Automation & Invoicing Platform",
+    "text": "Designed and developed a complete sales-to-invoice automation system integrated with Microsoft Dynamics 365. Built scalable backend services to handle sales orders, line items, and automated invoice generation, reducing manual effort and processing time by 70%.",
+    "tags": ["NestJS", "React", "TypeScript", "MongoDB", "Dynamics 365", "REST APIs"],
+    "images": [
+      "/assets/projects/d365-invoicing.png",
+      "/assets/projects/d365-orders.png",
+      "/assets/projects/d365-invoice-flow.png"
+    ]
   },
   {
-    "preview": "/assets/examples/example1.png",
-    "text": "Sit ex aliquip consequat labore qui aute anim sit. Aliquip fugiat elit ad officia id ad exercitation sit excepteur duis. Nostrud qui ullamco labore nostrud ullamco commodo aute ut proident elit occaecat magna. Veniam quis proident eiusmod laborum laboris veniam. Sunt dolor Lorem sunt aliqua ipsum fugiat aliquip do officia sint minim tempor. Consequat in adipisicing consectetur cillum amet do nulla amet minim sint.",
-    "title": "Website Name",
-    "tags": ["smth", "another tag", "something else"],
-    "images": ["/assets/examples/example1.png"]
+    "preview": "/assets/projects/iot-dashboard.png",
+    "title": "IoT Device Management & Monitoring Dashboard (PWA)",
+    "text": "Enterprise-grade Progressive Web App for monitoring and managing IoT devices in real time. Implemented MQTT-based communication, Node-RED automation workflows, secure Auth0 authentication, and Dockerized deployments for scalability.",
+    "tags": ["Node.js", "Vue.js", "PostgreSQL", "MQTT", "Node-RED", "Docker", "Auth0"],
+    "images": [
+      "/assets/projects/iot-dashboard.png",
+      "/assets/projects/iot-devices.png",
+      "/assets/projects/iot-analytics.png"
+    ]
   },
   {
-    "preview": "/assets/examples/example2.png",
-    "text": "Sit ex aliquip consequat labore qui aute anim sit. Aliquip fugiat elit ad officia id ad exercitation sit excepteur duis. Nostrud qui ullamco labore nostrud ullamco commodo aute ut proident elit occaecat magna. Veniam quis proident eiusmod laborum laboris veniam. Sunt dolor Lorem sunt aliqua ipsum fugiat aliquip do officia sint minim tempor. Consequat in adipisicing consectetur cillum amet do nulla amet minim sint.",
-    "title": "Website Name",
-    "tags": ["smth", "another tag", "something else"],
-    "images": ["/assets/examples/example2.png"]
+    "preview": "/assets/projects/api-platform.png",
+    "title": "Scalable Backend API Platform",
+    "text": "Built and optimized secure RESTful APIs using Node.js and Express.js for high-volume data transactions. Implemented JWT-based authentication, database optimization techniques, and modular service architecture.",
+    "tags": ["Node.js", "Express.js", "PostgreSQL", "JWT", "Microservices"],
+    "images": [
+      "/assets/projects/api-platform.png"
+    ]
   },
   {
-    "preview": "/assets/examples/example3.png",
-
-    "text": "Sit ex aliquip consequat labore qui aute anim sit. Aliquip fugiat elit ad officia id ad exercitation sit excepteur duis. Nostrud qui ullamco labore nostrud ullamco commodo aute ut proident elit occaecat magna. Veniam quis proident eiusmod laborum laboris veniam. Sunt dolor Lorem sunt aliqua ipsum fugiat aliquip do officia sint minim tempor. Consequat in adipisicing consectetur cillum amet do nulla amet minim sint.",
-    "title": "Website Name",
-    "tags": ["smth", "another tag", "something else"],
-    "images": ["/assets/examples/example2.png"]
+    "preview": "/assets/projects/web-apps.png",
+    "title": "Full Stack Web Applications",
+    "text": "Developed multiple responsive web applications using React.js and Vue.js with clean UI and optimized backend services. Focused on performance, maintainability, and real-world business use cases.",
+    "tags": ["React.js", "Vue.js", "HTML", "CSS", "JavaScript", "SQL"],
+    "images": [
+      "/assets/projects/web-apps.png"
+    ]
   }
 ]
