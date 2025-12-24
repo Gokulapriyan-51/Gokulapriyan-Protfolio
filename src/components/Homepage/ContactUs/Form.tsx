@@ -27,34 +27,6 @@ export default function Form({ onChange, onSend }: FormProps) {
     text: ''
   });
 
-  const validateForm = () => {
-    const newErrors = { fullName: '', email: '', phone: '', text: '' };
-    let isValid = true;
-
-    if (!formData.fullName.trim()) {
-      newErrors.fullName = 'Full Name is required.';
-      isValid = false;
-    }
-
-    if (!formData.email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Valid Email is required.';
-      isValid = false;
-    }
-
-    if (!formData.phone.trim()) {
-      newErrors.phone = 'Phone number is required.';
-      isValid = false;
-    }
-
-    if (!formData.text.trim()) {
-      newErrors.text = 'Message is required.';
-      isValid = false;
-    }
-
-    setErrors(newErrors);
-    return isValid;
-  };
-
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
     setErrors({ ...errors, [e.target.name]: '' });
@@ -68,7 +40,6 @@ export default function Form({ onChange, onSend }: FormProps) {
       target: { name: 'phone', value }
     } as unknown as ChangeEvent<HTMLInputElement>);
   };
-
 
   return (
     <div className='flex w-full animate-appear flex-col items-center justify-center gap-5 rounded-3xl bg-gradient-to-br from-primary/30 p-5 py-14 caret-primary md:w-3/4 md:shadow-blblur md:shadow-primary/50 lg:w-3/6'>
