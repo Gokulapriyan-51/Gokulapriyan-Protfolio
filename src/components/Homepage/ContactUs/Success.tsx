@@ -1,10 +1,11 @@
 import Image from 'next/image';
 
+
 export default function Success() {
   return (
     <div className='flex w-full animate-appear flex-col items-center justify-center gap-5 rounded-3xl bg-gradient-to-br from-primary/30 p-5 py-14 caret-primary md:w-3/4 md:shadow-blblur md:shadow-primary/50 lg:w-3/6'>
       <Image
-        src='/assets/catSuccess.png'
+        src='/assets/IMG_small.png'
         alt='success'
         className='h-64 w-auto'
         height={500}

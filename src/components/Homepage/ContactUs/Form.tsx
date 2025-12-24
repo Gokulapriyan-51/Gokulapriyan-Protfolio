@@ -187,10 +187,10 @@ export default function Form({ onChange, onSend }: FormProps) {
       </div>
 
       <DoubleButton
-        label='Send now!'
-        onClick={onSend ?? handleSendInternal} // ✅ FIXED
-        className='px-4 text-xl lg:px-10 lg:text-xl'
-      />
+  label='Send now!'
+  onClick={onSend}
+  className='px-4 text-xl lg:px-10 lg:text-xl'
+/>
     </div>
   );
 }

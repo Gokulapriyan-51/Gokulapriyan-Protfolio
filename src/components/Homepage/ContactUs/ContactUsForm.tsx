@@ -35,34 +35,54 @@ export default function ContactUsForm(props: ContactUsFormProps) {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const onSend = () => {
-    const errors = checkContactData(formData);
-    if (errors) {
-      setFormErrors(errors);
-    } else {
-      setShowForm(false);
-      setLoading(true);
-      emailjs.init(process.env.emailjsPublicKey as string);
-      emailjs
-        .send(
-          process.env.emailjsServiceId as string,
-          process.env.emailjsTemplateId as string,
-          formData as unknown as Record<string, unknown>
-        )
-        .then(
-          function (response) {
-            setLoading(false);
-            setIsSuccess(true);
-            console.log('SUCCESS!', response.status, response.text);
-          },
-          function (err) {
-            setLoading(false);
-            setIsSuccess(false);
-            console.log('FAILED...', err);
-          }
-        );
-    }
+ const onSend = async () => {
+  const errors = checkContactData(formData);
+
+  if (errors) {
+    setFormErrors(errors);
+    return;
+  }
+
+  setShowForm(false);
+  setLoading(true);
+
+  const web3FormsURL = 'https://api.web3forms.com/submit';
+  const accessKey = '88de83e1-4987-4cef-a60b-2656f86cec49';
+
+  const submissionData = {
+    access_key: accessKey,
+    name: formData.fullName,
+    email: formData.email,
+    phone: formData.phone,
+    company: formData.company,
+    message: formData.text
   };
+
+  try {
+    const response = await fetch(web3FormsURL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json'
+      },
+      body: JSON.stringify(submissionData)
+    });
+
+    const result = await response.json();
+
+    setLoading(false);
+
+    if (result.success) {
+      setIsSuccess(true);
+    } else {
+      setIsSuccess(false);
+    }
+  } catch (error) {
+    console.error(error);
+    setLoading(false);
+    setIsSuccess(false);
+  }
+};
 
   return (
     <div
